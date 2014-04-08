@@ -27,4 +27,20 @@ public class Carrinho {
         }
         return menor;
     }
+
+    int Count() {
+        return produtos.size();
+    }
+
+    void remove(Produto original) {
+        produtos.remove(original);
+    }
+
+    double valorTotal() {
+        double sum = 0;
+        for(Produto array : produtos){
+            sum += array.getPreco();
+        }
+        return sum;
+    }
 }
