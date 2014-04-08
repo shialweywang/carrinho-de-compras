@@ -93,4 +93,14 @@ public class CarrinhoTest {
         Produto original = carrinho.menorProduto();
         assertArrayEquals(new Object[]{original}, new Object[]{doll});
     }
+    
+    @Test
+    public void listarProdutos(){
+        Computador pc = new Computador(2000.00);
+        Doll doll = new Doll(150.00);
+        carrinho.add(pc);
+        carrinho.add(doll);
+        String lista = carrinho.listarProdutos();
+        assertTrue(lista.length() > 0);
+    }
 }
