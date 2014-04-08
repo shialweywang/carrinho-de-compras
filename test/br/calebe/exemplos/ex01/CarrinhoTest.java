@@ -83,4 +83,14 @@ public class CarrinhoTest {
         double valor = carrinho.valorTotal();
         assertTrue(valor == 4);
     }
+    
+    @Test
+    public void herancaProduto() throws CarrinhoVazioExpected {
+        Computador pc = new Computador(2000.00);
+        Doll doll = new Doll(150.00);
+        carrinho.add(pc);
+        carrinho.add(doll);
+        Produto original = carrinho.menorProduto();
+        assertArrayEquals(new Object[]{original}, new Object[]{doll});
+    }
 }
