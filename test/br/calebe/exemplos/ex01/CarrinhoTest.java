@@ -13,20 +13,18 @@ public class CarrinhoTest {
         carrinho = new Carrinho();
     }
 
-    @Test(expected = CarrinhoVazioExpected.class)
+    @Test
     public void colocandoZeroProduto() throws CarrinhoVazioExpected {
-        Produto menor;
-        menor = carrinho.menorProduto();
-        assertArrayEquals(new Object[]{null}, new Object[]{menor});
+        carrinho = new Carrinho();
+        assertTrue(carrinho.isVazio() == true);
     }
 
     @Test
     public void colocandoUmProduto() throws CarrinhoVazioExpected {
         Produto livro = new Produto("Java em 24 horas", 50.00);
         carrinho.add(livro);
-        Produto menor;
-        menor = carrinho.menorProduto();
-        assertArrayEquals(new Object[]{livro}, new Object[]{menor});
+        boolean prod = carrinho.find(livro);
+        assertTrue(prod == true);
     }
 
     @Test
