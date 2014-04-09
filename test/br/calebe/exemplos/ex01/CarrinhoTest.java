@@ -63,15 +63,13 @@ public class CarrinhoTest {
         assertTrue(quantidade == 3);
     }
  
-    @Test
+    @Test(expected = CarrinhoVazioExpected.class)
     public void removerProduto() throws CarrinhoVazioExpected {
         Produto original = new Produto("Java for Things", 2.00);
         carrinho.add(original);
-        Produto clone = new Produto("mine", 2.00);
-        carrinho.add(clone);
         carrinho.remove(original);
         original = carrinho.menorProduto();
-        assertArrayEquals(new Object[]{original}, new Object[]{clone});
+        assertArrayEquals(new Object[]{original}, new Object[]{original});
     }
     
     @Test

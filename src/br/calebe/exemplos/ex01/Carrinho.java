@@ -47,7 +47,7 @@ public class Carrinho {
     String listarProdutos() {
         String text = "";
         for(Produto array : produtos){
-            text += array.getNome();
+            text += array.getNome() + ";";
         }
         return text;
     }
