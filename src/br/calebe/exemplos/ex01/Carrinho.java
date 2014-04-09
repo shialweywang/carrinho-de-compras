@@ -43,4 +43,12 @@ public class Carrinho {
         }
         return sum;
     }
+
+    String listarProdutos() {
+        String text = "";
+        for(Produto array : produtos){
+            text += array.getNome();
+        }
+        return text;
+    }
 }
