@@ -28,8 +28,8 @@ public class PedidoController implements PedidoInterface{
     }
     
     @Override    
-    public String ChecarStatusPedido(Pedido pedido) {
-        return "";
+    public EnumStatusPedido ChecarStatusPedido(Carrinho c) {
+        return EnumStatusPedido.aguardando;
     }
     
 }

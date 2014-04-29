@@ -6,6 +6,7 @@
 
 package br.calebe.exemplos.ex02;
 
+import br.calebe.exemplos.ex01.Carrinho;
 import br.calebe.exemplos.ex01.EnumStatusPedido;
 import br.calebe.exemplos.ex01.Pedido;
 import javax.ejb.Remote;
@@ -16,5 +17,5 @@ import javax.ejb.Remote;
  */
 @Remote
 public interface PedidoInterface {
-    public String ChecarStatusPedido(Pedido p);
+    public EnumStatusPedido ChecarStatusPedido(Carrinho c);
 }
