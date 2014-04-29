@@ -4,16 +4,12 @@
  * and open the template in the editor.
  */
 
-package br.calebe.exemplos.ex02;
-
-import javax.ejb.Remote;
+package br.calebe.exemplos.ex01;
 
 /**
  *
  * @author desktop02
  */
-@Remote
-public interface CartaoInterface {
-
-    boolean Pagar(double i);
+public enum EnumStatusPedido {
+    aguardando, pago, empacotando, enviado, entregue
 }

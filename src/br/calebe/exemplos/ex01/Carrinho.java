@@ -1,12 +1,14 @@
 package br.calebe.exemplos.ex01;
 
+import br.calebe.exemplos.ex02.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Carrinho {
 
     private List<Produto> produtos;
-
+    private EnumStatusPedido Status;
+    
     public Carrinho() {
         produtos = new ArrayList<>();
     }
@@ -62,9 +64,11 @@ public class Carrinho {
         return false;
     }
     
-    public void PagarCartao()
+    public void PagarCartao() throws Exception
     {
-        double valor = valorTotal();
-        
+        pagamentoCartao card = new pagamentoCartao();
+        card.run(this);
     }
+    
+    
 }
