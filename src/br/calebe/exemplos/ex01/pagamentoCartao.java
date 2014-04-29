@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package br.calebe.exemplos.ex02;
+package br.calebe.exemplos.ex01;
 
 import br.calebe.exemplos.ex01.Carrinho;
 import br.calebe.exemplos.ex02.controller.*;

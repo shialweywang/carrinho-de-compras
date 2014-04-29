@@ -5,6 +5,7 @@
  */
 package br.calebe.exemplos.ex02;
 
+import br.calebe.exemplos.ex01.pagamentoCartao;
 import br.calebe.exemplos.ex02.controller.*;
 import junit.framework.Assert;
 import org.easymock.EasyMock;

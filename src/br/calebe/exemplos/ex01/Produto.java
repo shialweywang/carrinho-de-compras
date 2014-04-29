@@ -10,6 +10,11 @@ public class Produto {
         this.preco = preco;
     }
 
+    public Produto() {
+        this.nome = "";
+        this.preco = 0;
+    }
+
     public String getNome(){
         return nome;
     }
