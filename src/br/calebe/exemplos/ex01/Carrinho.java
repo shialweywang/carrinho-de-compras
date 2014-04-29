@@ -28,15 +28,15 @@ public class Carrinho {
         return menor;
     }
 
-    int Count() {
+    public int Count() {
         return produtos.size();
     }
 
-    void remove(Produto original) {
+    public void remove(Produto original) {
         produtos.remove(original);
     }
 
-    double valorTotal() {
+    public double valorTotal() {
         double sum = 0;
         for(Produto array : produtos){
             sum += array.getPreco();
@@ -44,11 +44,27 @@ public class Carrinho {
         return sum;
     }
 
-    String listarProdutos() {
+    public String listarProdutos() {
         String text = "";
         for(Produto array : produtos){
             text += array.getNome() + ";";
         }
         return text;
+    }
+
+    public boolean isVazio() {
+        return produtos.isEmpty();
+    }
+
+    public boolean find(Produto prod) {
+        if(produtos.contains(prod))
+            return true;
+        return false;
+    }
+    
+    public void PagarCartao()
+    {
+        double valor = valorTotal();
+        
     }
 }

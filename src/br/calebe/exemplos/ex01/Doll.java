@@ -8,9 +8,9 @@ package br.calebe.exemplos.ex01;
  *
  * @author 31032354
  */
-class Doll extends Produto{
+public class Doll extends Produto{
     
-    Doll(double d) {
+    public Doll(double d) {
         super("boneca",d);
     }
     
